@@ -1,13 +1,8 @@
-# ![BashBrunch](https://bashbrunch.attaditya.space/preview.png)
+# ![BashBrunch](./preview.png)
 
 ## BashBrunch Landing Page
 
 The official landing page for [BashBrunch](https://bashbrunch.attaditya.space/), a minimal terminal-based AI coding harness built entirely in Bash.
-
-## Structure
-
-- `index.html` - Landing page markup and styles
-- `web/` - Images and other static assets used by the page
 
 ## Development
 
