@@ -1,4 +1,4 @@
-# ![BashBrunch](https://bashbrunch.attaditya.space/web/preview.png)
+# ![BashBrunch](https://bashbrunch.attaditya.space/preview.png)
 
 ## BashBrunch Landing Page
 
