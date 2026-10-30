@@ -324,7 +324,7 @@ footer .links .col h4 {
 }
 
 .puppet:nth-child(2) {
-  left: 36vmin;
+  left: 45vmin;
   top: -15vmin;
   animation-delay: 0.5s;
 }
@@ -336,7 +336,7 @@ footer .links .col h4 {
 }
 
 .puppet:nth-child(4) {
-  left: 40vmin;
+  left: 44vmin;
   top: 20vmin;
   animation-delay: 1.5s;
 }
