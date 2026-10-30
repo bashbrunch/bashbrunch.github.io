@@ -450,3 +450,31 @@ footer .links .col h4 {
   z-index: 9999;
 }
 
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  background: var(--color-hyped);
+  padding: 0.5rem;
+  border-radius: 2rem;
+  box-shadow: 0.5rem 0.5rem 0 var(--color-focus);
+  transition: transform 0.2s;
+}
+
+.video-controls {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+

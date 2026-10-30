@@ -81,3 +81,42 @@ function mixedRain() {
   }
 }
 
+function restartVideo() {
+  const video = document.getElementById('demo-video');
+  video.currentTime = 0;
+}
+
+function toggleVideoPlayPause() {
+  const video = document.getElementById('demo-video');
+  const playPauseButton = document.getElementById('demo-playstate-button');
+
+  if (video.paused) {
+    video.play();
+    playPauseButton.textContent = 'Halt';
+  } else {
+    video.pause();
+    playPauseButton.textContent = 'Play';
+  }
+}
+
+function toggleVideoMute() {
+  const video = document.getElementById('demo-video');
+  const muteButton = document.getElementById('demo-mute-button');
+  video.muted = !video.muted;
+  muteButton.textContent = video.muted ? 'Sounds' : 'Silent';
+}
+
+function toggleVideoFullscreen() {
+  const video = document.getElementById('demo-video');
+
+  if (video.requestFullscreen) {
+    video.requestFullscreen();
+  } else if (video.mozRequestFullScreen) { // Firefox
+    video.mozRequestFullScreen();
+  } else if (video.webkitRequestFullscreen) { // Chrome, Safari and Opera
+    video.webkitRequestFullscreen();
+  } else if (video.msRequestFullscreen) { // IE/Edge
+    video.msRequestFullscreen();
+  }
+}
+
