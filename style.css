@@ -25,6 +25,7 @@ body {
   background-color: var(--color-shine);
   color: var(--color-shade);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 nav {
