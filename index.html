@@ -162,6 +162,188 @@
     </div>
   </section>
 
+  <section id="user-commands" class="section">
+    <h2>User Commands</h2>
+
+    <div class="commands-layout">
+      <div class="commands-list">
+        <button class="command-card" onclick="showCommandPreview(this)">
+          <h3>/?</h3>
+          <div class="command-card-content">
+            <h4>/?</h4>
+            <div><strong>Syntax:</strong> <code>/?</code></div>
+            <div>Display the list of available BashBrunch commands and their descriptions. Use this whenever you need a
+              quick reference for the harness.</div>
+          </div>
+        </button>
+
+        <button class="command-card" onclick="showCommandPreview(this)">
+          <h3>/!</h3>
+          <div class="command-card-content">
+            <h4>/!</h4>
+            <div><strong>Syntax:</strong> <code>/! &lt;cmd&gt;</code></div>
+            <div>Execute a shell command directly in the current session. Everything following <code>/!</code> is
+              treated
+              as a shell command and passed to the system for execution.</div>
+          </div>
+        </button>
+
+        <button class="command-card" onclick="showCommandPreview(this)">
+          <h3>/v</h3>
+          <div class="command-card-content">
+            <h4>/v</h4>
+            <div><strong>Syntax:</strong> <code>/v</code></div>
+            <div>Display the currently installed version of BashBrunch. Useful for checking which release you're
+              running.
+            </div>
+          </div>
+        </button>
+
+        <button class="command-card" onclick="showCommandPreview(this)">
+          <h3>/p</h3>
+          <div class="command-card-content">
+            <h4>/p</h4>
+            <div><strong>Syntax:</strong> <code>/p [provider]</code></div>
+            <div>Show the currently configured AI provider or switch to another supported provider. For example, use
+              <code>/p ollama</code> to switch to Ollama.
+            </div>
+          </div>
+        </button>
+
+        <button class="command-card" onclick="showCommandPreview(this)">
+          <h3>/m</h3>
+          <div class="command-card-content">
+            <h4>/m</h4>
+            <div><strong>Syntax:</strong> <code>/m [model]</code></div>
+            <div>Show the currently configured AI model or switch to another model supported by your provider. For
+              example, use <code>/m llama3.1</code> to select Llama 3.1.</div>
+          </div>
+        </button>
+
+        <button class="command-card" onclick="showCommandPreview(this)">
+          <h3>/k</h3>
+          <div class="command-card-content">
+            <h4>/k</h4>
+            <div><strong>Syntax:</strong> <code>/k [api_key]</code></div>
+            <div>Show or update the API key used to authenticate with your configured provider. For example, use
+              <code>/k myapikey</code> to set a new API key.
+            </div>
+          </div>
+        </button>
+
+        <button class="command-card" onclick="showCommandPreview(this)">
+          <h3>/q</h3>
+          <div class="command-card-content">
+            <h4>/q</h4>
+            <div><strong>Syntax:</strong> <code>/q</code></div>
+            <div>Exit BashBrunch and terminate the current harness session.</div>
+          </div>
+        </button>
+      </div>
+
+      <div class="commands-preview"></div>
+    </div>
+  </section>
+
+  <section id="ai-commands" class="section">
+    <h2>AI Commands</h2>
+
+    <div class="commands-layout">
+      <div class="commands-list">
+        <button class="command-card" onclick="showCommandPreview(this)">
+          <h3>/v</h3>
+          <div class="command-card-content">
+            <h4>/v</h4>
+            <div><strong>Syntax:</strong> <code>/v</code></div>
+            <div>Display the current BashBrunch version to the AI. Allows the AI to identify which version of the
+              harness is running.</div>
+          </div>
+        </button>
+
+        <button class="command-card" onclick="showCommandPreview(this)">
+          <h3>/sh</h3>
+          <div class="command-card-content">
+            <h4>/sh</h4>
+            <div><strong>Syntax:</strong> <code>/sh &lt;cmd&gt;</code></div>
+            <div>Execute a shell command and return its output to the AI. Useful for interacting with the system,
+              inspecting files, and running scripts.</div>
+          </div>
+        </button>
+
+        <button class="command-card" onclick="showCommandPreview(this)">
+          <h3>/msg</h3>
+          <div class="command-card-content">
+            <h4>/msg</h4>
+            <div><strong>Syntax:</strong> <code>/msg &lt;text&gt;</code></div>
+            <div>Send a message directly to the user. Use this to communicate information, explanations, results, or
+              questions without executing a shell command.</div>
+          </div>
+        </button>
+
+        <button class="command-card" onclick="showCommandPreview(this)">
+          <h3>/pass</h3>
+          <div class="command-card-content">
+            <h4>/pass</h4>
+            <div><strong>Syntax:</strong> <code>/pass</code></div>
+            <div>Return control of the terminal to the user. Use this when the AI has finished its current task or needs
+              the user to take over.</div>
+          </div>
+        </button>
+
+        <button class="command-card" onclick="showCommandPreview(this)">
+          <h3>/exit</h3>
+          <div class="command-card-content">
+            <h4>/exit</h4>
+            <div><strong>Syntax:</strong> <code>/exit</code></div>
+            <div>Exit the BashBrunch session and terminate the current harness interaction.</div>
+          </div>
+        </button>
+
+        <button class="command-card" onclick="showCommandPreview(this)">
+          <h3>/sh2a</h3>
+          <div class="command-card-content">
+            <h4>/sh2a</h4>
+            <div><strong>Syntax:</strong> <code>/sh2a &lt;contents&gt;</code></div>
+            <div>Append Bash code to the Script Storage File (SSF). Allows the AI to build multi-line scripts
+              incrementally without executing each command immediately.</div>
+          </div>
+        </button>
+
+        <button class="command-card" onclick="showCommandPreview(this)">
+          <h3>/sh2r</h3>
+          <div class="command-card-content">
+            <h4>/sh2r</h4>
+            <div><strong>Syntax:</strong> <code>/sh2r [start=0] [count=20]</code></div>
+            <div>Read and display a portion of the Script Storage File (SSF). Specify the starting line and number of
+              lines to retrieve. Defaults to the first 20 lines.</div>
+          </div>
+        </button>
+
+        <button class="command-card" onclick="showCommandPreview(this)">
+          <h3>/sh2x</h3>
+          <div class="command-card-content">
+            <h4>/sh2x</h4>
+            <div><strong>Syntax:</strong> <code>/sh2x [persist=0]</code></div>
+            <div>Execute the Bash script stored in the Script Storage File (SSF). By default, the SSF is cleared after
+              execution. Set <code>persist=1</code> to preserve its contents for subsequent executions.</div>
+          </div>
+        </button>
+
+        <button class="command-card" onclick="showCommandPreview(this)">
+          <h3>/sh2c</h3>
+          <div class="command-card-content">
+            <h4>/sh2c</h4>
+            <div><strong>Syntax:</strong> <code>/sh2c</code></div>
+            <div>Clear all contents of the Script Storage File (SSF). Use this to discard previously accumulated Bash
+              code and start with an empty script.</div>
+          </div>
+        </button>
+      </div>
+
+      <div class="commands-preview"></div>
+    </div>
+  </section>
+
   <section id="providers" class="section">
     <h2>Providers</h2>
 

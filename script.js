@@ -143,3 +143,12 @@ async function loadProviders() {
   providersContainer.replaceChildren(...cards);
 }
 
+function showCommandPreview(button) {
+  const layout = button.parentElement.parentElement;
+  const content = button.querySelector('.command-card-content');
+  const commandPreview = layout.querySelector('.commands-preview');
+  const clonedContent = content.cloneNode(true);
+  clonedContent.className = 'command-card-content-preview';
+  commandPreview.innerHTML = clonedContent.outerHTML;
+}
+

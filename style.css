@@ -486,3 +486,76 @@ footer .links .col h4 {
   gap: 1rem;
 }
 
+.commands-layout {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 1rem;
+}
+
+.commands-preview {
+  background: var(--color-white);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 0.125rem solid var(--color-focus);
+  box-shadow: 0.25rem 0.25rem 0 var(--color-focus);
+  transition: transform 0.2s;
+}
+
+.commands-preview:empty::before {
+  content: "Select a command to preview it here.";
+  color: var(--color-shade);
+  font-size: 1rem;
+  text-align: center;
+  display: block;
+  opacity: 0.5;
+}
+
+.commands-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.command-card {
+  cursor: pointer;
+}
+
+.command-card * {
+  cursor: pointer;
+}
+
+.command-card h3 {
+  font-size: 1rem;
+}
+
+.command-card-content, .command-card-content * {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.command-card-content-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.command-card-content-preview h4 {
+  font-size: 1.5rem;
+  color: var(--color-shade);
+}
+
+.command-card-content-preview code {
+  background: var(--color-hyped);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid var(--color-focus);
+  text-wrap: nowrap;
+}
+
