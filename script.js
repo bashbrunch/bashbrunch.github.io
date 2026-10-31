@@ -120,3 +120,26 @@ function toggleVideoFullscreen() {
   }
 }
 
+async function loadProviders() {
+  const providersContainer = document.getElementById('providers-list');
+  const providersResponse = await fetch('/bashbrunch/meta/providers.txt');
+
+  if (!providersResponse.ok)
+    return;
+
+  const providers = await providersResponse.text();
+  const providerList = providers.split('\n').filter(Boolean);
+  const cards = [];
+
+  for (const provider of providerList) {
+    const card = document.createElement('div');
+    const title = document.createElement('h3');
+    card.className = 'card';
+    title.textContent = provider;
+    card.appendChild(title);
+    cards.push(card);
+  }
+
+  providersContainer.replaceChildren(...cards);
+}
+
