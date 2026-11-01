@@ -89,13 +89,16 @@ function restartVideo() {
 function toggleVideoPlayPause() {
   const video = document.getElementById('demo-video');
   const playPauseButton = document.getElementById('demo-playstate-button');
+  const pauseWarning = document.getElementById('demo-pause-warning');
 
   if (video.paused) {
     video.play();
     playPauseButton.textContent = 'Halt';
+    pauseWarning.style.display = 'none';
   } else {
     video.pause();
     playPauseButton.textContent = 'Play';
+    pauseWarning.style.display = 'block';
   }
 }
 
